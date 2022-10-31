@@ -13,7 +13,7 @@ Drag and Drop objects from the menu.
 
 The camera has a simple controller script. 
 
-Use left mouse click on object to turn on gizmo and right mouse click to turn off gizmo.
+Use left mouse click on object to turn on gizmo and right mouse click to turn off gizmo. Use gizmo for object transform controls.
 
 ## Credits
 
