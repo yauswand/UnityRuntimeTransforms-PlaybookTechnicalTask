@@ -5,7 +5,7 @@
 
 ## Instructions
 
-The project is a simple drag and drop and object manipulation application. The application repurposes scripts and prefabs for 3D Transform controls from CaptainHillman/UnityTools for this technical task. It has a 3D menu panel and scale, translate and rotate controls in runtime for the spawned objects.
+The project is a simple drag and drop and object manipulation application. It has a 3D menu panel and scale, translate and rotate controls in runtime for the spawned objects.
 
 Instructions to use controls included in game.
 
