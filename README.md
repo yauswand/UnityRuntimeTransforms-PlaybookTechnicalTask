@@ -7,13 +7,16 @@
 
 The project is a simple drag and drop and object manipulation application. It has a 3D menu panel and scale, translate and rotate controls in runtime for the spawned objects.
 
-Instructions to use controls included in game.
+Instructions:
 
-Drag and Drop objects from the menu.
+Drag and Drop objects from the menu. (Left Mouse Click)
 
-The camera has a simple controller script. 
+The camera has a simple controller script. (WASDEQ for movement)
 
-Use left mouse click on object to turn on gizmo and right mouse click to turn off gizmo. Use gizmo for object transform controls.
+Use left mouse click on object to turn on gizmo and right mouse click anywhere to turn off gizmo. Use gizmo for object transform controls.
+
+##Important 
+Please change game view from free aspect to Full HD while testing the game, to view the canvas.
 
 ## Credits
 
