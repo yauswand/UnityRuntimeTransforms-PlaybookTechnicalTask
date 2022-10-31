@@ -7,7 +7,7 @@
 
 The project is a simple drag and drop and object manipulation application. It has a 3D menu panel and scale, translate and rotate controls in runtime for the spawned objects.
 
-# How to Use
+## How to Use
 
 Drag and Drop objects from the menu. (Left Mouse Click)
 
