@@ -91,13 +91,22 @@ public class GizmoScaleScript : MonoBehaviour
                     // X Axis
                     case 0:
                         {
-                            // Scale along the X axis
-                            float delta = Input.GetAxis("Mouse X") * (Time.deltaTime);
+                            
+                                // Scale along the X axis
+                             float delta = Input.GetAxis("Mouse X") * (Time.deltaTime);
                             delta *= scaleSpeed;
 
-                            if ((scaleTarget.transform.localScale.x - delta) <= 0.01f) return;
-                            scaleTarget.transform.localScale += new Vector3(-delta, 0.0f, 0.0f);
 
+                            if ((scaleTarget.transform.localScale.x - delta) <= 0.01f) return;
+
+                            if (Vector3.Dot(scaleTarget.transform.forward, Vector3.forward) >= 0)
+                            {
+                                scaleTarget.transform.localScale += new Vector3(-delta, 0.0f, 0.0f);
+                            }
+                            else
+                            {
+                                scaleTarget.transform.localScale -= new Vector3(-delta, 0.0f, 0.0f);
+                            }
 
 
                             previousGizmoScale = null;
@@ -112,9 +121,23 @@ public class GizmoScaleScript : MonoBehaviour
                             delta *= scaleSpeed;
 
                             if ((scaleTarget.transform.localScale.y + delta) <= 0.01f) return;
-                            scaleTarget.transform.localScale += new Vector3(0.0f, delta, 0.0f);
 
+                            if (Vector3.Dot(scaleTarget.transform.up, Vector3.up) >= 0)
+                            {
+                                scaleTarget.transform.localScale += new Vector3(0.0f, delta, 0.0f);
+                            }
                             
+
+                            else
+                            {
+                                scaleTarget.transform.localScale -= new Vector3(0.0f,delta, 0.0f);
+                            }
+
+
+
+                           
+
+
                             previousGizmoScale = null;
                         }
                         break;
@@ -127,10 +150,16 @@ public class GizmoScaleScript : MonoBehaviour
                             delta *= scaleSpeed;
 
                             if ((scaleTarget.transform.localScale.z + delta) <= 0.01f) return;
-                            scaleTarget.transform.localScale -= new Vector3(0.0f, 0.0f, delta);
 
-                           
-
+                            if (Vector3.Dot(scaleTarget.transform.right, Vector3.right) >= 0)
+                            {
+                                scaleTarget.transform.localScale += new Vector3(0.0f, 0.0f, -delta);
+                            }
+                                
+                            else
+                            {
+                                scaleTarget.transform.localScale -= new Vector3(0.0f, 0.0f, -delta);
+                            }
                             previousGizmoScale = null;
                         }
                          break;
